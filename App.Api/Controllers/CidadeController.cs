@@ -40,6 +40,31 @@ namespace App.Api.Controllers
             _service.Salvar(objCidade); // Salvar
             return Json(true);
         }
-
+        [HttpDelete("RemoverCidadePeloId")]
+        public JsonResult Remover(Guid id)
+        {
+            try
+            {
+                _service.Remover(id);
+                return Json(true);
+            }
+            catch
+            {
+                return Json(false);
+            }
+        }
+        [HttpDelete("RemoverCidadePeloNome")]
+        public JsonResult RemoverPorNome(string Nome)
+        {
+            try
+            {
+                _service.RemoverPorNome(Nome);
+                return Json(true);
+            }
+            catch 
+            { 
+                return Json(false);
+            }
+        }
     }
 }

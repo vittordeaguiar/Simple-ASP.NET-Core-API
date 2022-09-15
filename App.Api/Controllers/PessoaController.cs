@@ -27,8 +27,8 @@ namespace App.Api.Controllers
             return Json(_service.BuscaPorId(id));
         }
 
-        [HttpGet("BuscaPorPessoa")]
-        public JsonResult BuscaPorNome(string nome)
+        [HttpGet("BuscaPorNome")]
+        public JsonResult BuscaPorNome(string? nome)
         {
             var pessoa = _service.BuscaPorNome(nome);
             return Json(pessoa); // Pega "minhaCidade" e transforma em Json

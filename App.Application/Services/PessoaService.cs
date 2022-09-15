@@ -36,9 +36,9 @@ namespace App.Application.Services
             _repository.SaveChanges();
         }
 
-        public Pessoa BuscaPorNome(string nome)
+        public Pessoa BuscaPorNome(string? nome)
         {
-            var retornoPessoas = _repository.Query(x => x.Nome == nome).FirstOrDefault();
+            var retornoPessoas = _repository.Query(x => x.Nome.Contains(nome) || nome == null).FirstOrDefault();
             return retornoPessoas;
         }
 

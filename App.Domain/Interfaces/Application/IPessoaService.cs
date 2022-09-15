@@ -11,7 +11,7 @@ namespace App.Domain.Interfaces.Application
     {
         Pessoa BuscaPorNome(string nome);
         Pessoa BuscaPorId(Guid id);
-        Pessoa BuscaPorCpf(string cpf);
+        Pessoa BuscaPorCpf(string? cpf);
         List<Pessoa> ListaPessoas();
         void Salvar(Pessoa obj);
     }

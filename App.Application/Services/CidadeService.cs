@@ -64,5 +64,18 @@ namespace App.Application.Services
             )
             ).ToList();
         }
+
+        public void RemoverPorNome(string Nome)
+        {
+            var cidade = _repository.Query(x => x.Nome == Nome).FirstOrDefault();
+            if (cidade != null)
+            {
+                _repository.Delete(cidade.Id);
+            }
+            else
+            {
+                throw new Exception("Cidade não encontrada");
+            }
+        }
     }
 }
