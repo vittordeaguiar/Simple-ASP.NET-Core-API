@@ -19,7 +19,7 @@ namespace App.Domain.Interfaces.Repositories
          */
         
         void Save(TEntity obj); // Não retorna nada, somente altera o valor
-        void Delete(Guid id);
+        void Delete(Guid id); // Deleta
         void Update(TEntity obj); // "obj" é o apelido
         int SaveChanges(); // Só grava no banco se eu der um "SaveChanges()"
         DbContext Context();

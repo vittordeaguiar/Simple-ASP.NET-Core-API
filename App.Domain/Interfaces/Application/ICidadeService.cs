@@ -10,9 +10,10 @@ namespace App.Domain.Interfaces.Application
     // Assinatura dos métodos
     public interface ICidadeService
     {
+        Cidade BuscaPorId(Guid id);
         Cidade BuscaPorCep(string cep); // Digitar o CEP e retornar o nome da cidade
         void Remover(Guid id); // Vamos remover a cidade pelo id
         void Salvar(Cidade obj);
-        List<Cidade> ListaCidades(string cep, string nome);
+        List<Cidade> ListaCidades(string? nome, string? cep);
     }
 }

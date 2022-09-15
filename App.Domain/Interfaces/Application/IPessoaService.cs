@@ -9,7 +9,9 @@ namespace App.Domain.Interfaces.Application
 {
     public interface IPessoaService
     {
+        Pessoa BuscaPorNome(string nome);
         Pessoa BuscaPorId(Guid id);
+        Pessoa BuscaPorCpf(string cpf);
         List<Pessoa> ListaPessoas();
         void Salvar(Pessoa obj);
     }

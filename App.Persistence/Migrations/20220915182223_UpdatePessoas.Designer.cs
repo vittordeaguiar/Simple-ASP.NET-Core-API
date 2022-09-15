@@ -3,6 +3,7 @@ using System;
 using App.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace App.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220915182223_UpdatePessoas")]
+    partial class UpdatePessoas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,10 +55,6 @@ namespace App.Persistence.Migrations
 
                     b.Property<bool>("Ativo")
                         .HasColumnType("boolean");
-
-                    b.Property<string>("Cpf")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("timestamp with time zone");

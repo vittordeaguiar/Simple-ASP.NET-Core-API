@@ -1,6 +1,7 @@
 ﻿using App.Domain.Entities;
 using App.Domain.Interfaces.Application;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.ConstrainedExecution;
 
 namespace App.Api.Controllers
 {
@@ -26,14 +27,27 @@ namespace App.Api.Controllers
             return Json(_service.BuscaPorId(id));
         }
 
+        [HttpGet("BuscaPorPessoa")]
+        public JsonResult BuscaPorNome(string nome)
+        {
+            var pessoa = _service.BuscaPorNome(nome);
+            return Json(pessoa); // Pega "minhaCidade" e transforma em Json
+        }
+        [HttpGet("BuscaPorCpf")]
+        public JsonResult BuscaPorCpf(string cpf)
+        {
+            return Json(_service.BuscaPorCpf(cpf));
+        }
+
         [HttpPost("Salvar")]
-        public JsonResult Salvar(string nome, int peso, DateTime dataNascimento, bool ativo)
+        public JsonResult Salvar(string nome, int peso, string cpf, bool ativo)
         {
             var obj = new Pessoa
             {
                 Nome = nome,
-                DataNascimento = dataNascimento,
+                //DataNascimento = dataNascimento,
                 Peso = peso,
+                Cpf = cpf,
                 Ativo = ativo
             };
             _service.Salvar(obj);

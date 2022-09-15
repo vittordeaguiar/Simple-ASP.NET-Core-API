@@ -20,35 +20,49 @@ namespace App.Application.Services
         }
         public Cidade BuscaPorCep(string cep)
         {
+            if (Equals(!String.IsNullOrEmpty(cep)))
+            {
+                throw new Exception("Informe o CEP");
+            }
             // Vai ir para o banco buscar/comparar o CEP inserido
             var retornoCidade = _repository.Query(cidade => cidade.Cep == cep).FirstOrDefault();
             return retornoCidade;
         }
 
+        public Cidade BuscaPorId(Guid id)
+        {
+            if (id == Guid.Empty)
+            {
+                throw new Exception("Informe o ID");
+            }
+            return _repository.Query(x => x.Id == id).FirstOrDefault();
+        }
         public void Remover(Guid id)
         {
-            throw new NotImplementedException();
+            _repository.Delete(id);
+            _repository.SaveChanges();
         }
 
         public void Salvar(Cidade obj)
         {
-            throw new NotImplementedException();
+            if (String.IsNullOrEmpty(obj.Nome))
+            {
+                throw new Exception("Informa o nome da cidade");
+            }
+            // Somente recebe o objeto e salva
+            _repository.Save(obj);
+            _repository.SaveChanges();
         }
 
-        public List<Cidade> ListaCidades(string cep, string nome)
+        // Espera receber uma lista de cidades
+        public List<Cidade> ListaCidades(string? nome, string? cep) // Pode filtrar por CEP ou nome da cidade
         {
-            throw new NotImplementedException();
+            return _repository.Query(x =>
+            (
+            (nome == null || x.Nome.Contains(nome)) && 
+            (cep == null || x.Cep.Contains(cep))
+            )
+            ).ToList();
         }
-
-        //public Cidade BuscaPorCep(Guid id)
-        //{
-        //    var obj = _repository.Query(x => x.Id == id).FirstOrDefault();
-        //    return obj;
-        //}
-
-        //public List<Cidade> ListaCidades()
-        //{
-        //    return _repository.Query(x => 1 == 1).ToList();
-        //}
     }
 }

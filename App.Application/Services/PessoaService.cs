@@ -35,5 +35,16 @@ namespace App.Application.Services
             _repository.Save(obj);
             _repository.SaveChanges();
         }
+
+        public Pessoa BuscaPorNome(string nome)
+        {
+            var retornoPessoas = _repository.Query(x => x.Nome == nome).FirstOrDefault();
+            return retornoPessoas;
+        }
+
+        public Pessoa BuscaPorCpf(string cpf)
+        {
+            return _repository.Query(x => x.Cpf == cpf).FirstOrDefault();
+        }
     }
 }

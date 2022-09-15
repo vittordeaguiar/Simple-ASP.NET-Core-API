@@ -62,5 +62,14 @@ namespace App.Persistence.Repositories
             }
             return written;
         }
+
+        public void Delete(Guid id)
+        {
+            var data = _dbSetEntity.Find(id);
+            if (data != null)
+            {
+                _dbSetEntity.Remove(data);
+            }
+        }
     }
 }

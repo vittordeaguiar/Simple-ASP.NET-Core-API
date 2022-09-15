@@ -13,8 +13,8 @@ namespace App.Application
     {
         public static void Inject(IServiceCollection services) // Método
         {
-            services.AddTransient<ICidadeService, CidadeService>();
-            services.AddTransient<IPessoaService, PessoaService>();
+            services.AddTransient<ICidadeService, CidadeService>(); // Adiciona Cidade
+            services.AddTransient<IPessoaService, PessoaService>(); // Adiciona Pessoa
         }
     }
 }
