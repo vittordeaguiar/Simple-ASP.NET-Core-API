@@ -1,0 +1,12 @@
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Infrastructure\bin\Debug\net6.0\App.Infrastructure.deps.json
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Infrastructure\bin\Debug\net6.0\App.Infrastructure.dll
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Infrastructure\bin\Debug\net6.0\App.Infrastructure.pdb
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.AssemblyInfo.cs
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.dll
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Infrastructure\obj\Debug\net6.0\refint\App.Infrastructure.dll
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Infrastructure\obj\Debug\net6.0\App.Infrastructure.pdb
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Infrastructure\obj\Debug\net6.0\ref\App.Infrastructure.dll

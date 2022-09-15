@@ -1,0 +1,17 @@
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\bin\Debug\net6.0\App.Persistence.deps.json
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\bin\Debug\net6.0\App.Persistence.runtimeconfig.json
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\bin\Debug\net6.0\App.Persistence.dll
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\bin\Debug\net6.0\App.Persistence.pdb
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\bin\Debug\net6.0\App.Domain.dll
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\bin\Debug\net6.0\App.Domain.pdb
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\obj\Debug\net6.0\App.Persistence.csproj.AssemblyReference.cache
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\obj\Debug\net6.0\App.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\obj\Debug\net6.0\App.Persistence.AssemblyInfoInputs.cache
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\obj\Debug\net6.0\App.Persistence.AssemblyInfo.cs
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\obj\Debug\net6.0\App.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\obj\Debug\net6.0\App.Persistence.csproj.CopyComplete
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\obj\Debug\net6.0\App.Persistence.dll
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\obj\Debug\net6.0\refint\App.Persistence.dll
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\obj\Debug\net6.0\App.Persistence.pdb
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\obj\Debug\net6.0\App.Persistence.genruntimeconfig.cache
+C:\Users\vitto\OneDrive\Documentos\vs-workspace\aspnet_core\App\App.Persistence\obj\Debug\net6.0\ref\App.Persistence.dll

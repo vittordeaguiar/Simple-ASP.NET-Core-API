@@ -11,9 +11,15 @@ namespace App.Domain.Interfaces.Repositories
     // Criação das assinaturas dos métodos. Serão criadas 4 assinaturas
     public interface IRepositoryBase<TEntity> where TEntity : class
     {
-        IQueryable<TEntity> Query(Expression<Func<TEntity, bool>> where); // Métodos de busca utilizarão o "Query"
-        // Vai retornar qualquer tipo de dado que for inserido
+        IQueryable<TEntity> Query(Expression<Func<TEntity, bool>> where);
+        
+        /*
+         * Métodos de busca utilizarão o "Query"
+         * Vai retornar qualquer tipo de dado que for inserido
+         */
+        
         void Save(TEntity obj); // Não retorna nada, somente altera o valor
+        void Delete(Guid id);
         void Update(TEntity obj); // "obj" é o apelido
         int SaveChanges(); // Só grava no banco se eu der um "SaveChanges()"
         DbContext Context();

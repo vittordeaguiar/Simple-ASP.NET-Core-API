@@ -14,6 +14,5 @@ namespace App.Domain.Interfaces.Application
         void Remover(Guid id); // Vamos remover a cidade pelo id
         void Salvar(Cidade obj);
         List<Cidade> ListaCidades(string cep, string nome);
-
     }
 }

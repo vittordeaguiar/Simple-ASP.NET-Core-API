@@ -26,7 +26,7 @@ namespace App.Persistence.Repositories
             return _dbSetEntity.Where(where).AsNoTracking();
         }
 
-        public void Save(TEntity obj)
+        public void Save(TEntity obj) // Responsável por atualizar ou adicionar um dado ao banco de dados
         {
             if ((Guid)obj.GetType().GetProperty("Id").GetValue(obj, null) != Guid.Empty)
             {

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "RU46q4YvcEbvjll1c5JxQlZYS5LeDUiye7PF5t8Jj6HN5EcIxGCpaSvVpdTFmkfwNxROPzMncBtl5VV7dfOZ9w==",
+  "dgSpecHash": "GX/uWK6JgYrK79nluQrqjr0lAgVZhItQwuzFTkmp5g0L0KCHP3AHX9H7two5jbArKI2ve3iXzNcJ2/fjKmDQqw==",
   "success": true,
   "projectFilePath": "C:\\Users\\vitto\\OneDrive\\Documentos\\vs-workspace\\aspnet_core\\App\\App.Infrastructure\\App.Infrastructure.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\vitto\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
