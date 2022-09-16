@@ -1,4 +1,5 @@
-﻿using App.Domain.Entities;
+﻿using App.Domain.DTO;
+using App.Domain.Entities;
 using App.Domain.Interfaces.Application;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.ConstrainedExecution;
@@ -18,40 +19,92 @@ namespace App.Api.Controllers
         [HttpGet("ListaPessoas")]
         public JsonResult ListaPessoas()
         {
-            return Json(_service.ListaPessoas());
+            try
+            {
+                var lista = _service.ListaPessoas();
+                return Json(RetornoApi.Sucesso(lista));
+            }
+            catch (Exception ex)
+            {
+                return Json(RetornoApi.Erro(ex.Message));
+            }
         }
 
         [HttpGet("BuscaPorId")]
         public JsonResult BuscaPorId(Guid id)
         {
-            return Json(_service.BuscaPorId(id));
+            try
+            {
+                var busca = _service.BuscaPorId(id);
+                return Json(RetornoApi.Sucesso(busca));
+            }
+            catch (Exception ex)
+            {
+                return Json(RetornoApi.Erro(ex.Message));
+            }
         }
 
         [HttpGet("BuscaPorNome")]
         public JsonResult BuscaPorNome(string? nome)
         {
-            var pessoa = _service.BuscaPorNome(nome);
-            return Json(pessoa); // Pega "minhaCidade" e transforma em Json
+            try
+            {
+                var pessoa = _service.BuscaPorNome(nome);
+                return Json(RetornoApi.Sucesso(pessoa));
+            }
+            catch (Exception ex)
+            {
+                return Json(RetornoApi.Erro(ex.Message));
+            }
         }
         [HttpGet("BuscaPorCpf")]
         public JsonResult BuscaPorCpf(string cpf)
         {
-            return Json(_service.BuscaPorCpf(cpf));
+            try
+            {
+                var buscaCpf = Json(_service.BuscaPorCpf(cpf));
+                return Json(RetornoApi.Sucesso(buscaCpf));
+            }
+            catch (Exception ex)
+            {
+                return Json(RetornoApi.Erro(ex.Message));
+            }
         }
 
         [HttpPost("Salvar")]
         public JsonResult Salvar(string nome, int peso, string cpf, bool ativo)
         {
-            var obj = new Pessoa
+            try
             {
-                Nome = nome,
-                //DataNascimento = dataNascimento,
-                Peso = peso,
-                Cpf = cpf,
-                Ativo = ativo
-            };
-            _service.Salvar(obj);
-            return Json(true);
+                var obj = new Pessoa
+                {
+                    Nome = nome,
+                    //DataNascimento = dataNascimento,
+                    Peso = peso,
+                    Cpf = cpf,
+                    Ativo = ativo
+                };
+                _service.Salvar(obj);
+                return Json(RetornoApi.Sucesso(obj));
+            }
+            catch (Exception ex)
+            {
+                return Json(RetornoApi.Erro(ex.Message));
+            }
+        }
+
+        [HttpDelete("RemoverPessoaPeloNome")]
+        public JsonResult RemoverPorNome(string nome)
+        {
+            try
+            {
+                _service.RemoverPorNome(nome);
+                return Json(RetornoApi.Sucesso(true));
+            }
+            catch (Exception ex)
+            {
+                return Json(RetornoApi.Erro(ex.Message));
+            }
         }
     }
 }

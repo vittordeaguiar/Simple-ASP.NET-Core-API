@@ -71,5 +71,14 @@ namespace App.Persistence.Repositories
                 _dbSetEntity.Remove(data);
             }
         }
+
+        public void Delete(object id)
+        {
+            var data = _dbSetEntity.Find(id);
+            if (data != null)
+            {
+                _dbSetEntity.Remove(data);
+            }
+        }
     }
 }

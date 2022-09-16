@@ -1,4 +1,5 @@
-﻿using App.Domain.Entities;
+﻿using App.Domain.DTO;
+using App.Domain.Entities;
 using App.Domain.Interfaces.Application;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,44 +14,45 @@ namespace App.Api.Controllers
         {
             _service = service;
         }
-        [HttpGet("BuscaPorCep")]
-        // Aqui irá retornar um Json
+        [HttpGet("BuscaPorCep")] // Aqui irá retornar um Json
         public JsonResult BuscaPorCep(string cep)
         {
-            var minhaCidade = _service.BuscaPorCep(cep);
-            return Json(minhaCidade); // Pega "minhaCidade" e transforma em Json
+            try
+            {
+                var minhaCidade = _service.BuscaPorCep(cep);
+                return Json(RetornoApi.Sucesso(minhaCidade));
+            }
+            catch (Exception ex)
+            {
+                return Json(RetornoApi.Erro(ex.Message));
+            }
         }
 
         [HttpGet("ListaCidades")]
         public JsonResult ListaCidades(string? nome, string? cep)
         {
-            return Json(_service.ListaCidades(nome, cep));
+            try
+            {
+                var obj = _service.ListaCidades(nome, cep);
+                return Json(RetornoApi.Sucesso(obj));
+            }
+            catch (Exception ex)
+            {
+                return Json(RetornoApi.Erro(ex.Message));
+            }
         }
 
         [HttpPost("Salvar")]
-        public JsonResult Salvar(string cep, string nome, string estado)
-        {
-            // Montando um objeto de Cidade
-            var objCidade = new Cidade // Pega as entradas do usuário e transforma e cria Cidade
-            {
-                Cep = cep,
-                Estado = estado,
-                Nome = nome
-            };
-            _service.Salvar(objCidade); // Salvar
-            return Json(true);
-        }
-        [HttpDelete("RemoverCidadePeloId")]
-        public JsonResult Remover(Guid id)
+        public JsonResult Salvar([FromBody] Cidade obj)
         {
             try
             {
-                _service.Remover(id);
-                return Json(true);
+                _service.Salvar(obj); // Salvar
+                return Json(RetornoApi.Sucesso(true));
             }
-            catch
+            catch (Exception ex)
             {
-                return Json(false);
+                return Json(RetornoApi.Erro(ex.Message));
             }
         }
         [HttpDelete("RemoverCidadePeloNome")]
@@ -61,8 +63,8 @@ namespace App.Api.Controllers
                 _service.RemoverPorNome(Nome);
                 return Json(true);
             }
-            catch 
-            { 
+            catch
+            {
                 return Json(false);
             }
         }

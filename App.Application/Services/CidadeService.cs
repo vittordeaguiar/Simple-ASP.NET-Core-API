@@ -37,11 +37,6 @@ namespace App.Application.Services
             }
             return _repository.Query(x => x.Id == id).FirstOrDefault();
         }
-        public void Remover(Guid id)
-        {
-            _repository.Delete(id);
-            _repository.SaveChanges();
-        }
 
         public void Salvar(Cidade obj)
         {
@@ -71,6 +66,7 @@ namespace App.Application.Services
             if (cidade != null)
             {
                 _repository.Delete(cidade.Id);
+                _repository.SaveChanges();
             }
             else
             {

@@ -46,5 +46,19 @@ namespace App.Application.Services
         {
             return _repository.Query(x => x.Cpf == cpf).FirstOrDefault();
         }
+
+        public void RemoverPorNome(string nome)
+        {
+            var pessoa = _repository.Query(x => x.Nome == nome).FirstOrDefault();
+            if (pessoa != null)
+            {
+                _repository.Delete(pessoa.Id);
+                _repository.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Pessoa não encontrada");
+            }
+        }
     }
 }

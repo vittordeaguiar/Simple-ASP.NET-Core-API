@@ -23,5 +23,6 @@ namespace App.Domain.Interfaces.Repositories
         void Update(TEntity obj); // "obj" é o apelido
         int SaveChanges(); // Só grava no banco se eu der um "SaveChanges()"
         DbContext Context();
+        void Delete(object id);
     }
 }

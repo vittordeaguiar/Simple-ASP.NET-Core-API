@@ -12,6 +12,7 @@ namespace App.Domain.Interfaces.Application
         Pessoa BuscaPorNome(string nome);
         Pessoa BuscaPorId(Guid id);
         Pessoa BuscaPorCpf(string? cpf);
+        void RemoverPorNome(string nome);
         List<Pessoa> ListaPessoas();
         void Salvar(Pessoa obj);
     }

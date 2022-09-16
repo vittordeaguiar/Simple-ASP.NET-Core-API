@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/9U+0XjQDlKmJjPnO5jXPprLRabWoV8EKXkA6c/bYmyjT8erfSLErRr6+lB+OItXZUifiQ/C0Yj6hIwLr5Ctfg==",
+  "dgSpecHash": "IhPLvvs8v8DSRJwUfWHSd65zaGFYvCjBgSRoiBXy2Ol7W3BZ8HYeNQ9+wDUGHKq/Mx2sSP3B6/GfnK2du8+A2g==",
   "success": true,
   "projectFilePath": "C:\\Users\\vitto\\OneDrive\\Documentos\\vs-workspace\\aspnet_core\\App\\App.Domain\\App.Domain.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\vitto\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\vitto\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\vitto\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\vitto\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\vitto\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\vitto\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\vitto\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"

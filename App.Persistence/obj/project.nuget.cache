@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EsqJkefZ2DRgfFxZaUMh8039nFao93D5ZK4vOu4dPhSGpfLesvdj/OpQcV730jkEEAiLU2rtn8YHdxlOqAJSjQ==",
+  "dgSpecHash": "BGDqk5ffdQb1+uvN4HjEwhJsd9xUsGIFPtsuM1FEhOt30BJ412o6DiXahRciRYBAE/XT4mitKULPrlwJE6X4rg==",
   "success": true,
   "projectFilePath": "C:\\Users\\vitto\\OneDrive\\Documentos\\vs-workspace\\aspnet_core\\App\\App.Persistence\\App.Persistence.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\vitto\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\vitto\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\vitto\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\vitto\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\vitto\\.nuget\\packages\\npgsql\\6.0.6\\npgsql.6.0.6.nupkg.sha512",
     "C:\\Users\\vitto\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\6.0.6\\npgsql.entityframeworkcore.postgresql.6.0.6.nupkg.sha512",
     "C:\\Users\\vitto\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
